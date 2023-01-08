@@ -2,20 +2,20 @@ import { ResponsiveContainer, PieChart, Pie } from 'recharts';
 
 export function Piegraphsumblock() {
   const datax = [
-    { name: 'Travel', value: 23, fill: '#0088fe' },
-    { name: 'Cargo', value: 25, fill: '#00c49f' },
-    { name: 'Electricity', value: 17, fill: '#00049f' },
+    { name: 'Maternity Bra', value: 23, fill: '#0088fe' },
+    { name: 'Regular Bra', value: 25, fill: '#00c49f' },
+    { name: 'Pantry', value: 17, fill: '#00049f' },
     // { name: "Fuel", value: 22, fill: "#ff0000" },
-    { name: 'Refrigeration', value: 17, fill: '#ff8042' },
-    { name: 'Delivery', value: 18, fill: '#8884d8' },
+    { name: 'Nighty', value: 17, fill: '#ff8042' },
+    { name: 'Loungee dress kind', value: 18, fill: '#8884d8' },
+    { name: 'Loungee Long tee kind', value: 18, fill: '#ac2195' },
+    { name: 'Long Bottom', value: 18, fill: '#8824d8' },
   ];
 
   return (
     <>
       <div className='dashgraphbarcont'>
-        <h2 className='dashgraph__header'>
-          Distribution of CO<sub>2</sub>e
-        </h2>
+        <h2 className='dashgraph__header'>Amount of Carbon Saved</h2>
         <div className='dashgraphbar__cont'>
           <ResponsiveContainer width='100%' height='100%'>
             <PieChart height={250}>

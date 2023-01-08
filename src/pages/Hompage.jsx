@@ -61,6 +61,21 @@ export function Hompage() {
                 </p>
                 <p className='summaryparam__value'>19000 KWh </p>
               </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>
+                  Total Business
+                  <br />
+                  Commuting
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>
+                  Total Employees
+                  <br /> Commuting
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
               {/* <div className="summaryparam">
                 <p className="summaryparam__title">
                   Total fuel <br /> scope
@@ -68,6 +83,113 @@ export function Hompage() {
                 <p className="summaryparam__value">1521.7 Liters </p>
               </div> */}
             </div>
+            {/* Part 2 below */}
+            <div className='summaryparams'>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>
+                  Amount of emissions
+                  <br />
+                  for each product
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>
+                  Carbon Saved on
+                  <br />
+                  Maternity Bra
+                  <br />
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>
+                  Carbon Saved on
+                  <br />
+                  Regular Bra
+                  <br />
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>
+                  Carbon Saved on
+                  <br />
+                  Pantry
+                  <br />
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              {/* <div className="summaryparam">
+                <p className="summaryparam__title">
+                  Total fuel <br /> scope
+                </p>
+                <p className="summaryparam__value">1521.7 Liters </p>
+              </div> */}
+            </div>
+            {/* Part 3 below */}
+            <div className='summaryparams'>
+              <div className='summaryparam'>
+                <p className='summaryparam__title smallest'>
+                  Carbon Saved on
+                  <br />
+                  Loungee Long tee kind
+                  <br />
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title '>
+                  Carbon Saved on
+                  <br />
+                  Loungee Dress kind
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title '>
+                  Carbon Saved on
+                  <br />
+                  Nighty
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title '>
+                  Carbon Saved on
+                  <br />
+                  Long Bottom
+                </p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+              {/* <div className="summaryparam">
+                <p className="summaryparam__title">
+                  Total fuel <br /> scope
+                </p>
+                <p className="summaryparam__value">1521.7 Liters </p>
+              </div> */}
+            </div>
+            {/* Part 4 below */}
+            <div className='summaryparams'>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>Carbon Intensity</p>
+                <p className='summaryparam__value'>23392 kms</p>
+              </div>
+              <div className='summaryparam'>
+                <p className='summaryparam__title'>Scrap %</p>
+                <p className='summaryparam__value'>19000 KWh </p>
+              </div>
+
+              {/* <div className="summaryparam">
+                <p className="summaryparam__title">
+                  Total fuel <br /> scope
+                </p>
+                <p className="summaryparam__value">1521.7 Liters </p>
+              </div> */}
+            </div>
+            <br />
+            <br />
+            <br />
             <div className='datefilters'>
               <h3 className='datefilters__head'>Date Filters</h3>
               <ThemeProvider theme={theme}>
@@ -112,18 +234,23 @@ export function Hompage() {
 
             <div className='homevizgraph__cont'>
               <div className='summarygrid'>
+                <Piegraphsumblock />
                 <Linegraphblock
                   vizarray={chartarray}
-                  graphname={'Air Travel'}
+                  graphname={'Business Commute'}
                   colorvalue={color1}
                 />
-                <Piegraphsumblock />
                 <Bargraphblock
                   vizarray={chartarray}
-                  graphname={'Road Travel'}
+                  graphname={'Employee Commute'}
                   colorvalue={color1}
                 />
                 <Areagraphblock
+                  vizarray={chartarray}
+                  graphname={'Electricty'}
+                  colorvalue={color1}
+                />
+                <Scattergraphblock
                   vizarray={chartarray}
                   graphname={'Air Cargo'}
                   colorvalue={color1}
@@ -135,17 +262,22 @@ export function Hompage() {
                 />
                 <Bargraphblock
                   vizarray={chartarray}
-                  graphname={'Electricity'}
+                  graphname={'Building Space Consumed'}
                   colorvalue={color2}
                 />
                 <Bargraphblock
                   vizarray={chartarray}
-                  graphname={'Refrigeration'}
+                  graphname={'Warehouse Space'}
                   colorvalue={color3}
                 />
                 <Bargraphblock
                   vizarray={chartarray}
                   graphname={'Delivery'}
+                  colorvalue={color3}
+                />
+                <Bargraphblock
+                  vizarray={chartarray}
+                  graphname={'Fuel Consumed'}
                   colorvalue={color3}
                 />
               </div>

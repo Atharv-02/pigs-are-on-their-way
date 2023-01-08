@@ -83,3 +83,28 @@
   margin-top: 0rem;
   margin-right: 5rem;
 }
+.summaryparam {
+  width: 271px;
+}
+.summaryparam .summaryparam__value {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.summaryparam .summaryparam__title {
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+.summaryparams {
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+}
+.dashparameter {
+  width: 271px;
+}
+.smallest {
+  font-size: 1.8rem !important;
+}
+.homevizgraph__cont {
+  gap: 1rem;
+}
